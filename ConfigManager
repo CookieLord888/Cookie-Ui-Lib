@@ -184,6 +184,28 @@ function FlagsManager:SetLibrary(library)
     FlagsManager.Flags = library.Flags
 end
 
+
+
+function FlagsManager:SetAutoLoad(name)
+    if not name or name=="" then return false,"no config selected" end
+    writefile(FlagsManager.Folder.."/autoload.txt",name)
+    return true
+end
+
+function FlagsManager:RemoveAutoLoad()
+    local f=FlagsManager.Folder.."/autoload.txt"
+    if isfile(f) then delfile(f) end
+end
+
+function FlagsManager:LoadAutoLoad()
+    local f=FlagsManager.Folder.."/autoload.txt"
+    if not isfile(f) then return end
+    local c=readfile(f)
+    if c=="" then return end
+    if not isfile(FlagsManager.Folder.."/settings/"..c..".json") then delfile(f) return end
+    task.defer(function() FlagsManager:Load(c) end)
+end
+
 function FlagsManager:InitSaveSystem(tab)
     -- assert(FlagsManager.Library, "Must set SaveManager.Library")
     local SaveManager_ConfigName = ""
