@@ -1,11 +1,11 @@
-# 3itx's UI Lib 
+# Cookie's UI Lib 
 ### This is a Open-Source UI lib using Wax to compile into text file and i've decided to release this to the public since i don't need this ui lib no more so yeah have fun using it 
 
 ## Example
 
 ```lua
-   local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Just3itx/3itx-UI-LIB/refs/heads/main/Lib"))() 
-  local FlagsManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/Just3itx/3itx-UI-LIB/refs/heads/main/ConfigManager"))()
+   local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/CookieLord888/Cookie-Ui-Lib/refs/heads/main/Lib"))() 
+  local FlagsManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/CookieLord888/Cookie-Ui-Lib-LIB/refs/heads/main/ConfigManager"))()
 
   local main = lib:Load({
       Title = 'Cool Title',
@@ -125,5 +125,5 @@ FlagsManager:SetIgnoreIndexes({})
 FlagsManager:SetFolder("Config/GameName")
 FlagsManager:InitSaveSystem(Config)
 
-lib:Notification('Hello', 'Hello, Thanks for using 3itx-UI-Lib',3)
+lib:Notification('Hello', 'Hello, Thanks for using Cookie-UI-Lib',3)
 ```
