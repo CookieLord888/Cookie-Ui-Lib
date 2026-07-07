@@ -2,7 +2,7 @@ local httpService = game:GetService("HttpService")
 
 local FlagsManager = {}
 
-FlagsManager.Folder = "3itx"
+FlagsManager.Folder = "CookieLord"
 FlagsManager.Ignore = {}
 FlagsManager.Flags = {}
 FlagsManager.Library = nil
