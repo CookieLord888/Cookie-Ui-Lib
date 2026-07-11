@@ -315,7 +315,7 @@ function Library:Load(cfgs)
 		Parent = top_frame,
 	}, {
 		Create("ImageLabel", {
-			Image = "rbxassetid://15269257100",
+			Image = "rbxassetid://82723114036650",
 			ImageRectOffset = Vector2.new(514, 257),
 			ImageRectSize = Vector2.new(256, 256),
 			AnchorPoint = Vector2.new(0.5, 0.5),
@@ -344,7 +344,7 @@ function Library:Load(cfgs)
 		Parent = top_frame,
 	}, {
 		Create("ImageLabel", {
-			Image = "rbxassetid://15269329696",
+			Image = "rbxassetid://136601070121471",
 			ImageRectOffset = Vector2.new(0, 514),
 			ImageRectSize = Vector2.new(256, 256),
 			AnchorPoint = Vector2.new(0.5, 0.5),
@@ -816,7 +816,7 @@ function Notif:ShowNotification(titleText, descriptionText, duration)
     })
 
     local user = Create("ImageLabel", {
-        Image = "rbxassetid://10723415903",
+        Image = "rbxassetid://99132653705859",
         BackgroundTransparency = 1,
         Size = UDim2.new(0, 18, 0, 18),
         Visible = true,
@@ -1925,7 +1925,7 @@ function Element:New(Idx, Config)
 	})
 
 	local color = Create("ImageLabel", {
-		Image = "rbxassetid://4155801252",
+		Image = "rbxassetid://79309671683867",
 		BackgroundColor3 = Color3.fromRGB(255, 0, 4),
 		Size = UDim2.new(1, -10, 0, 127),
 		Visible = true,
@@ -2410,7 +2410,7 @@ function Element:New(Idx, Config)
 	local function AddOptions(Options)
 		for _, Option in pairs(Options) do
 			local check = Create("ImageLabel", {
-				Image = "rbxassetid://15269180838",
+				Image = "rbxassetid://91383847559061",
 				ThemeProps = { ImageColor3 = "itemcheckmarkcolor", },
 				ImageRectOffset = Vector2.new(514, 257),
 				ImageRectSize = Vector2.new(256, 256),
@@ -2599,7 +2599,7 @@ function Element:New(Idx, Config)
 				Parent = tagBtn,
 			}, {
 				Create("ImageLabel", {
-					Image = "rbxassetid://15269329696",
+					Image = "rbxassetid://136601070121471",
 					ImageRectOffset = Vector2.new(0, 514),
 					ImageRectSize = Vector2.new(256, 256),
 					AnchorPoint = Vector2.new(0.5, 0.5),
