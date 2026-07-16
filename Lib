@@ -2328,19 +2328,19 @@ function Element:New(Idx, Config)
 		BackgroundTransparency = 1,
 		BorderColor3 = Color3.fromRGB(0, 0, 0),
 		BorderSizePixel = 0,
-		Size = UDim2.new(0, 120, 0, 30),
+		Size = UDim2.new(0, 80, 0, 22),
 		Visible = true,
-		Parent = DropdownElement,
+		Parent = holder,
 	}, {
 		Create("UIPadding", {
 			PaddingBottom = UDim.new(0, 0),
-			PaddingLeft = UDim.new(0, 12),
-			PaddingRight = UDim.new(0, 12),
+			PaddingLeft = UDim.new(0, 8),
+			PaddingRight = UDim.new(0, 8),
 			PaddingTop = UDim.new(0, 0),
 			Archivable = true,
 		}),
 		Create("UIFlexItem", {
-			FlexMode = Enum.UIFlexMode.Fill,
+			FlexMode = Enum.UIFlexMode.Grow,
 		}),
 	})
 
@@ -2473,13 +2473,12 @@ function Element:New(Idx, Config)
 					local index = table.find(Dropdown.Value, Option)
 					if index then
 						table.remove(Dropdown.Value, index)
-						Dropdown:Set(Dropdown.Value)
-						if #Dropdown.Value == 0 then
-							Config.Callback = {}
-						end
 					else
-						Dropdown:Set(Option)
+						if #Dropdown.Value < (Config.MaxOptions or math.huge) then
+							table.insert(Dropdown.Value, Option)
+						end
 					end
+					Dropdown:Set(Dropdown.Value)
 				else
 					if Dropdown.Value == Option then
 						Dropdown:Set("")
